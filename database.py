@@ -9,6 +9,7 @@ try:
 
     cursorObject = database.cursor()
 
+    cursorObject.execute("DROP DATABASE IF EXISTS crmdata")
     cursorObject.execute("CREATE DATABASE crmdata")
     print("All done!")
 except:
