@@ -1,7 +1,7 @@
 # What is this project?
 Is a simple CRM application based on Django framework.
 
-# Registros do programa
+# Screenshots
 ![](assets/sample-1.png)
 ![](assets/sample-2.png)
 
