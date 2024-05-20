@@ -1,11 +1,7 @@
-import mysql.connector
+import sqlite3.dbapi2 as sqlite
 
 try:
-    database = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        passwd="MintMaster123"
-    )
+    database = sqlite.connect('./db.sqlite3')
 
     cursorObject = database.cursor()
 
