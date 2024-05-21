@@ -1,12 +1,13 @@
-import sqlite3.dbapi2 as sqlite
+import psycopg2
 
 try:
-    database = sqlite.connect('./db.sqlite3')
-
-    cursorObject = database.cursor()
-
-    cursorObject.execute("DROP DATABASE IF EXISTS crmdata")
-    cursorObject.execute("CREATE DATABASE crmdata")
-    print("All done!")
-except:
-    raise Exception("Failed to init database!")
+    db_connection = psycopg2.connect(
+        dbname="verceldb",
+        user="default",
+        password="jQf6WlJD0HhI",
+        host="ep-lively-unit-a42hu5mi-pooler.us-east-1.aws.neon.tech",
+        port="5432"
+    )
+    print("successfully connected to database!")
+except Exception as e:
+    raise print(f"CONNECTION ERROR: {e}")
