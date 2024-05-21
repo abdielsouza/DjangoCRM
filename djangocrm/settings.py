@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     h for h in os.getenv('ALLOWED_HOSTS', '').split(",") if h
 ]
 """
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
 
 # Application definition
 
